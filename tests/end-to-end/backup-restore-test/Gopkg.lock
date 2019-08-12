@@ -229,7 +229,7 @@
   revision = "d82505e6c5b4ce46562d6c242be0e706791f35bd"
 
 [[projects]]
-  digest = "1:eced04ebcce3f2545a85ec8da59df650c2de6ec27571e08a01f7aa49fd620672"
+  digest = "1:72d2aa0e236164fb804ad15b12f466eb7060a5527d36e707aa6cf4efb4cae924"
   name = "github.com/knative/serving"
   packages = [
     "pkg/apis/autoscaling",
@@ -241,6 +241,7 @@
     "pkg/apis/serving/v1alpha1",
     "pkg/apis/serving/v1beta1",
     "pkg/client/clientset/versioned/scheme",
+    "pkg/client/clientset/versioned/typed/serving/v1alpha1",
   ]
   pruneopts = "NUT"
   revision = "6afdcf3c200cc8cffcfdeaa223a00df150f4026f"
@@ -821,18 +822,6 @@
   version = "v1.11.10"
 
 [[projects]]
-  digest = "1:6af5c00b4c72199c9d2b0dbc3a970144346eaedf685bd053cd649b6e15455cff"
-  name = "knative.dev/serving"
-  packages = [
-    "pkg/apis/serving/v1alpha1",
-    "pkg/apis/serving/v1beta1",
-    "pkg/client/clientset/versioned/typed/serving/v1alpha1",
-  ]
-  pruneopts = "NUT"
-  revision = "6afdcf3c200cc8cffcfdeaa223a00df150f4026f"
-  version = "v0.6.1"
-
-[[projects]]
   digest = "1:b2cae87f790ae141af181acd57d0d46f22468b6ee391c59d37c0d82987cdb69f"
   name = "sigs.k8s.io/controller-runtime"
   packages = ["pkg/runtime/scheme"]
@@ -847,6 +836,9 @@
     "github.com/avast/retry-go",
     "github.com/go-redis/redis",
     "github.com/google/uuid",
+    "github.com/knative/serving/pkg/apis/serving/v1alpha1",
+    "github.com/knative/serving/pkg/apis/serving/v1beta1",
+    "github.com/knative/serving/pkg/client/clientset/versioned/typed/serving/v1alpha1",
     "github.com/kubeless/kubeless/pkg/apis/kubeless/v1beta1",
     "github.com/kubeless/kubeless/pkg/client/clientset/versioned",
     "github.com/kubernetes-incubator/service-catalog/pkg/apis/servicecatalog/v1beta1",
@@ -892,9 +884,6 @@
     "k8s.io/client-go/rest",
     "k8s.io/client-go/tools/clientcmd",
     "k8s.io/kubernetes/pkg/kubectl/genericclioptions/printers",
-    "knative.dev/serving/pkg/apis/serving/v1alpha1",
-    "knative.dev/serving/pkg/apis/serving/v1beta1",
-    "knative.dev/serving/pkg/client/clientset/versioned/typed/serving/v1alpha1",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1
