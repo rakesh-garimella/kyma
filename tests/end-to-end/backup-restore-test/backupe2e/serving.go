@@ -11,13 +11,13 @@ import (
 	. "github.com/smartystreets/goconvey/convey"
 
 	"github.com/avast/retry-go"
-	serving_api "github.com/knative/serving/pkg/apis/serving/v1alpha1"
-	"github.com/knative/serving/pkg/apis/serving/v1beta1"
-	serving "github.com/knative/serving/pkg/client/clientset/versioned/typed/serving/v1alpha1"
 	"github.com/kyma-project/kyma/common/ingressgateway"
 	"github.com/kyma-project/kyma/tests/end-to-end/backup-restore-test/utils/config"
 	corev1 "k8s.io/api/core/v1"
 	meta "k8s.io/apimachinery/pkg/apis/meta/v1"
+	serving_api "knative.dev/serving/pkg/apis/serving/v1alpha1"
+	"knative.dev/serving/pkg/apis/serving/v1beta1"
+	serving "knative.dev/serving/pkg/client/clientset/versioned/typed/serving/v1alpha1"
 )
 
 type servingTest struct {
