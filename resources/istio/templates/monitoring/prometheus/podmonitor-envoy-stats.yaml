@@ -54,3 +54,5 @@ spec:
     matchExpressions:
     - key: testing.kyma-project.io/created-by-octopus
       operator: DoesNotExist
+    - key: service.istio.io/canonical-name
+      operator: Exists
