@@ -17,3 +17,9 @@ istio:
   installer:
     image: eu.gcr.io/kyma-project/istio-installer
     tag: 19e240cd
+
+prometheus:
+  envoyPodMonitor:
+    scrapeInterval: 2m
+  istioServiceMonitor:
+    scrapeInterval: 1m

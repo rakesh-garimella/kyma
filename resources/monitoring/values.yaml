@@ -1462,7 +1462,7 @@ prometheus:
 
     ## Interval between consecutive scrapes.
     ##
-    scrapeInterval: 30s
+    scrapeInterval: 1m
 
     ## Interval between consecutive evaluations.
     ##
