@@ -124,7 +124,6 @@ metrics:
   serviceMonitor:
     create: false
     name:
-    scrapeInterval: 1m
     labels: {}
     annotations: {}
   pod:
