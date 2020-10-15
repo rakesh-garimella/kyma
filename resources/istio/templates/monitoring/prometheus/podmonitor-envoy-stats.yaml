@@ -15,7 +15,14 @@ metadata:
   namespace: {{ .Release.Namespace }}
 spec:
   namespaceSelector:
+  {{- if .Values.prometheus.envoyPodMonitor.namespaces }}
+    matchNames:
+      {{- range $i, $namespace := (splitList "," .Values.prometheus.envoyPodMonitor.namespaces) }}
+      - {{ $namespace }}
+      {{- end }}
+  {{- else }}
     any: true
+  {{- end }}
   podMetricsEndpoints:
   - interval: {{ .Values.prometheus.envoyPodMonitor.scrapeInterval }}
     metricRelabelings:

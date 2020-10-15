@@ -21,5 +21,7 @@ istio:
 prometheus:
   envoyPodMonitor:
     scrapeInterval: 2m
+    #comma separated list of namespaces to match. If not set, all namespaces will be matched
+    #namespaces: 
   istioServiceMonitor:
     scrapeInterval: 1m
