@@ -23,5 +23,7 @@ prometheus:
     scrapeInterval: 2m
     #comma separated list of namespaces to match. If not set, all namespaces will be matched
     #namespaces: 
+  recordingRules:
+    interval: 2m
   istioServiceMonitor:
     scrapeInterval: 1m
