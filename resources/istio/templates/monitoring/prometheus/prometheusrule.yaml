@@ -5,7 +5,7 @@ metadata:
     meta.helm.sh/release-name: {{ $.Release.Name | quote }}
     meta.helm.sh/release-namespace: {{ .Release.Namespace }}
   labels:
-    app: {{ .Release.Name }}
+    app: monitoring
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: envoy-stats
