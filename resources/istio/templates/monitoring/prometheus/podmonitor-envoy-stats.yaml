@@ -30,7 +30,7 @@ spec:
       sourceLabels:
       - __name__
     - action: labeldrop
-      regex: ^(destination_canonical_service|destination_canonical_revision|source_canonical_revision|source_canonical_service)$
+      regex: ^(grpc_response_status|source_version|source_principal|source_app|response_flags|request_protocol|destination_version|destination_principal|destination_app|destination_canonical_service|destination_canonical_revision|source_canonical_revision|source_canonical_service)$
     - action: replace
       regex: (istio.*)
       replacement: "workload:${1}"
