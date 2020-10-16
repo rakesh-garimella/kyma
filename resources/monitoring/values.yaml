@@ -538,6 +538,14 @@ grafana:
           access: proxy
           url: http://tracing-jaeger-query.kyma-system:16686
           editable: true
+    workload-prom:
+      enabled: true
+      config:
+        - name: workload-prometheus
+          type: prometheus
+          access: proxy
+          url: http://monitoring-prometheus-server.kyma-system:80
+          editable: true
 
   additionalDataSources:
   # - name: prometheus-sample
@@ -1972,3 +1980,5 @@ prometheus:
 
 pushgateway:
   enabled: false
+workload-prometheus:
+  enabled: true
