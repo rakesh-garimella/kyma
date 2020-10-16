@@ -328,7 +328,7 @@ configmapReload:
   prometheus:
     ## If false, the configmap-reload container will not be deployed
     ##
-    enabled: false
+    enabled: true
 
     ## configmap-reload container name
     ##
@@ -337,8 +337,8 @@ configmapReload:
     ## configmap-reload container image
     ##
     image:
-      repository: jimmidyson/configmap-reload
-      tag: v0.4.0
+      repository: eu.gcr.io/kyma-project/external/quay.io/coreos/configmap-reload
+      tag: v0.0.1
       pullPolicy: IfNotPresent
 
     ## Additional configmap-reload container arguments
@@ -573,8 +573,8 @@ server:
   ## Prometheus server container image
   ##
   image:
-    repository: prom/prometheus
-    tag: v2.21.0
+    repository: eu.gcr.io/kyma-project/external/quay.io/prometheus/prometheus
+    tag: v2.17.1
     pullPolicy: IfNotPresent
 
   ## prometheus server priorityClassName
