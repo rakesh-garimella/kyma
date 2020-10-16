@@ -538,28 +538,13 @@ grafana:
           access: proxy
           url: http://tracing-jaeger-query.kyma-system:16686
           editable: true
-    workload-prom:
-      enabled: true
-      config:
-        - name: workload-prometheus
-          type: prometheus
-          access: proxy
-          url: http://monitoring-prometheus-server.kyma-system:80
-          editable: true
 
   additionalDataSources:
-  # - name: prometheus-sample
-  #   access: proxy
-  #   basicAuth: true
-  #   basicAuthPassword: pass
-  #   basicAuthUser: daco
-  #   editable: false
-  #   jsonData:
-  #       tlsSkipVerify: true
-  #   orgId: 1
-  #   type: prometheus
-  #   url: https://prometheus.svc:9090
-  #   version: 1
+    - name: Workload
+      type: prometheus
+      access: proxy
+      url: http://monitoring-prometheus-server.kyma-system:80
+      editable: true
 
   ## Passed to grafana subchart and used by servicemonitor below
   ##
