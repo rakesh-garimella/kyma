@@ -1,4 +1,4 @@
-{{- if not .Values.server.enabled -}}
+{{- if .Values.istioPrometheus.enabled -}}
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
@@ -15,7 +15,7 @@ spec:
   selector:
     matchLabels:
       app: prometheus
-      component: server
+      component: istio
   endpoints:
   - params:
       'match[]':

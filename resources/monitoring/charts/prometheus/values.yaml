@@ -362,7 +362,11 @@ configmapReload:
     ## configmap-reload resource requests and limits
     ## Ref: http://kubernetes.io/docs/user-guide/compute-resources/
     ##
-    resources: {}
+    resources:
+      limits:
+        memory: 10Mi
+      requests:
+        memory: 2Mi
   alertmanager:
     ## If false, the configmap-reload container will not be deployed
     ##
@@ -567,7 +571,7 @@ server:
   # namespaces:
   #   - yournamespace
 
-  name: server
+  name: istio
   sidecarContainers:
 
   ## Prometheus server container image

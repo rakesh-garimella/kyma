@@ -38,6 +38,9 @@ data:
 {{- if .Values.grafana.dataSources.jaeger.enabled }}
 {{ toYaml .Values.grafana.dataSources.jaeger.config | indent 4}}
 {{- end }}
+{{- if (and .Values.grafana.dataSources.istioPrometheus.enabled .Values.istioPrometheus.enabled)}}
+{{ toYaml .Values.grafana.dataSources.istioPrometheus.config | indent 4}}
+{{- end }}
 {{- if .Values.grafana.additionalDataSources }}
 {{ toYaml .Values.grafana.additionalDataSources | indent 4}}
 {{- end }}

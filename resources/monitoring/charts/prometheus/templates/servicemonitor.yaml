@@ -14,7 +14,7 @@ spec:
   selector:
     matchLabels:
       app: prometheus
-      component: server
+      component: istio
   endpoints:
   - path: /metrics
     targetPort: 9090

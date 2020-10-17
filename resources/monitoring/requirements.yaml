@@ -2,4 +2,4 @@ dependencies:
     - name: prometheus-pushgateway
       condition: pushgateway.enabled
     - name: prometheus
-      condition: workload-prometheus.enabled
+      condition: istioPrometheus.enabled
