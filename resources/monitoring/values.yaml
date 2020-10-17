@@ -544,7 +544,7 @@ grafana:
         - name: Istio-Prometheus
           type: prometheus
           access: proxy
-          url: http://monitoring-prometheus-server.kyma-system:80
+          url: http://monitoring-prometheus-istio.kyma-system:80
           editable: true
 
   additionalDataSources:
