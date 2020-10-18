@@ -13,8 +13,8 @@ spec:
     - kyma-system
   selector:
     matchLabels:
-      app: prometheus
-      component: istio
+      app: prometheus-istio
+      component: server
   endpoints:
   - path: /metrics
     targetPort: 9090

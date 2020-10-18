@@ -571,7 +571,7 @@ server:
   # namespaces:
   #   - yournamespace
 
-  name: istio
+  name: "server"
   sidecarContainers:
 
   ## Prometheus server container image
@@ -904,10 +904,10 @@ server:
   ##
   resources:
     limits:
-      cpu: 900m
-      memory: 2000Mi
+      cpu: 600m
+      memory: 3000Mi
     requests:
-      cpu: 200m
+      cpu: 40m
       memory: 200Mi
 
   ## Vertical Pod Autoscaler config
